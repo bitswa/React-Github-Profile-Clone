@@ -1,0 +1,45 @@
+
+
+.repositories-container {
+  width: 100%;
+}
+
+.repositories-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #30363d;
+}
+
+.repositories-header input {
+  font-size: 14px;
+  padding: 5px 12px;
+  width: 100%;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+
+  background: none;
+  outline: none;
+}
+
+.repositories-header input:focus-visible {
+  border-color: #58a6ff;
+  box-shadow: inset 0 0 0 1px #58a6ff;
+}
+
+.repositories-container li {
+  padding: 1.5rem 0;
+  list-style-type: none;
+  border-bottom: 1px solid #30363d;
+}
+
+.repositories-container li a {
+  color: #58a6ff;
+  font-size: 20px;
+}
+
+.repositories-container li a:hover {
+  text-decoration: underline;
+}
+
+.repo-info {
+  padding-top: 8px;
+}
