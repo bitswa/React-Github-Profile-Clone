@@ -6,15 +6,14 @@ import './App.css';
 
 function App() {
   const [user, setUser] = useState('');
+  const [search, setSearch] = useState('');
   const [data, setData] = useState(null);
   const [repos, setRepos] = useState(null);
-  const [search, setSearch] = useState('');
 
   const GithubData = async () => {
     const response = await fetch(`https://api.github.com/users/${user}`);
     const data = await response.json();
     setData(data);
-    console.log(data)
     await GithubRepo();
   }
 
@@ -23,7 +22,6 @@ function App() {
     const data = await response.json();
     setRepos(null);
     setRepos(data);
-    console.log(data)
   }
 
   const SearchRepo = async () => {
@@ -40,7 +38,7 @@ function App() {
     if(search) {
       SearchRepo();
     }
-    if(search === '') {
+    if(search === '' && user) {
       GithubRepo();
     }
   }, [search]);

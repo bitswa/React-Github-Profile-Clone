@@ -22,9 +22,9 @@ function Repositories(props) {
       </div>
       <div>
         <ul>
-          {repos?.map(repo => {
+          {repos?.map((repo, index) => {
             return (
-              <li>
+              <li key={index}>
                 <div>
                   <div>
                     <h3><a href={repo.html_url}>{repo.name}</a></h3>
